@@ -1,0 +1,458 @@
+import { Navigation } from '@/components/navigation'
+import { CookieBanner } from '@/components/cookie-banner'
+import { Card } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import Image from 'next/image'
+
+export default function HomePage() {
+  return (
+    <div className="min-h-screen">
+      <Navigation />
+      <CookieBanner />
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden px-4 pb-20 pt-32 md:pb-32 md:pt-40">
+        {/* Full Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/images/obstler-hero.jpg"
+            alt="Deutsche Obstgärten"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-background/85"></div>
+        </div>
+        
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center">
+            <Badge variant="secondary" className="mb-6 border border-primary/20 bg-card/80 px-4 py-2 text-sm font-medium text-foreground backdrop-blur-sm">
+              Süddeutschland - Seit Jahrhunderten
+            </Badge>
+            <h1 className="mb-6 font-serif text-4xl font-bold leading-tight text-balance text-foreground md:text-6xl lg:text-7xl">
+              Die Seele der deutschen Obstgärten im Glas
+            </h1>
+            <div className="mx-auto mb-8 h-1 w-24 bg-primary"></div>
+            <p className="mx-auto max-w-3xl text-lg leading-relaxed text-pretty text-foreground/80 md:text-xl">
+              Obstler - oder wie man in Bayern und Baden-Württemberg sagt: der reinste Ausdruck deutscher Obstkultur. 
+              Ein kristallklarer Fruchtbrand aus Äpfeln, Birnen, Pflaumen und Kirschen, der seit Generationen die 
+              Handwerkskunst süddeutscher Brennereien verkörpert.
+            </p>
+            
+            <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <a
+                href="#geschichte"
+                className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:bg-primary/90 hover:shadow-xl"
+              >
+                Geschichte entdecken
+              </a>
+              <a
+                href="#genuss"
+                className="inline-flex h-12 items-center justify-center rounded-md border-2 border-primary/30 bg-card/80 px-8 text-sm font-semibold text-foreground backdrop-blur-sm transition-all hover:border-primary/50 hover:bg-card"
+              >
+                Wie man genießt
+              </a>
+            </div>
+
+            <p className="mt-8 text-xs text-muted-foreground">
+              18+ - Diese Informationen über alkoholische Getränke sind nur für Personen ab 18 Jahren. Bitte trinken Sie verantwortungsbewusst.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Alcohol Strength Highlight */}
+      <section className="border-y-2 border-primary/20 bg-muted/50 px-4 py-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-center md:gap-12">
+            <div>
+              <h2 className="mb-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
+                Höchste Alkoholstärke
+              </h2>
+              <p className="text-sm text-muted-foreground">auf dieser Website</p>
+            </div>
+            <div className="flex items-baseline gap-2">
+              <span className="font-serif text-6xl font-bold text-primary md:text-7xl">50</span>
+              <span className="text-2xl font-semibold text-foreground">% vol</span>
+            </div>
+          </div>
+          <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
+            Diese Seite ist ein reines Informationsangebot über alkoholische Getränke der deutschen Tradition. 
+            Hier wird weder verkauft noch bestellt - nur die Kultur bewahrt.
+          </p>
+          <p className="mt-4 text-center text-xs text-muted-foreground">
+            18+ - Alkoholische Getränke sind nur für Personen ab 18 Jahren. Bitte trinken Sie verantwortungsbewusst.
+          </p>
+        </div>
+      </section>
+
+      {/* Beer Section */}
+      <section id="bier" className="bg-background px-4 py-20 md:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <span className="mb-4 inline-block text-sm font-medium uppercase tracking-wide text-primary">
+              Tradition
+            </span>
+            <h2 className="mb-4 font-serif text-3xl font-bold text-foreground md:text-5xl">
+              Deutsche Bierkultur
+            </h2>
+            <p className="mx-auto max-w-2xl text-lg text-pretty text-muted-foreground">
+              Vom Reinheitsgebot bis zur modernen Craft-Bewegung - deutsches Bier ist Weltkultur
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {/* Weizenbier */}
+            <Card className="overflow-hidden border border-border transition-all hover:shadow-lg">
+              <div className="relative h-48 overflow-hidden bg-[#F5E6D3]">
+                <Image
+                  src="/images/weizenbier.jpg"
+                  alt="Weizenbier"
+                  fill
+                  className="object-cover opacity-40"
+                />
+                <div className="relative z-10 p-6">
+                  <h3 className="mb-2 font-serif text-2xl font-bold text-[#2C2416]">Weizenbier</h3>
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-serif text-3xl font-bold text-[#2C2416]">5-6</span>
+                    <span className="text-sm font-medium text-[#5C4A2C]">% vol</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4 bg-white p-6">
+                <div>
+                  <h4 className="mb-2 text-sm font-bold text-[#2C2416]">Ursprung</h4>
+                  <p className="text-sm leading-relaxed text-[#5C4A2C]">
+                    Bayern - 16. Jahrhundert. Das obergärige Weizenbier entstand als königliches Privileg und wurde zum Symbol bayerischer Braukunst.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="mb-2 text-sm font-bold text-[#2C2416]">Charakter</h4>
+                  <p className="text-sm leading-relaxed text-[#5C4A2C]">
+                    Fruchtige Bananen- und Nelkenaromen, natürlich trüb durch die Hefe, erfrischend mit weichem Körper.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Pilsner */}
+            <Card className="overflow-hidden border border-border transition-all hover:shadow-lg">
+              <div className="relative h-48 overflow-hidden bg-[#D8E3D0]">
+                <Image
+                  src="/images/pilsner.jpg"
+                  alt="Pilsner"
+                  fill
+                  className="object-cover opacity-40"
+                />
+                <div className="relative z-10 p-6">
+                  <h3 className="mb-2 font-serif text-2xl font-bold text-[#1C2A16]">Pilsner</h3>
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-serif text-3xl font-bold text-[#1C2A16]">4.5-5</span>
+                    <span className="text-sm font-medium text-[#3A4A2E]">% vol</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4 bg-white p-6">
+                <div>
+                  <h4 className="mb-2 text-sm font-bold text-[#1C2A16]">Ursprung</h4>
+                  <p className="text-sm leading-relaxed text-[#3A4A2E]">
+                    Norddeutschland - 19. Jahrhundert. Das untergärige Pils wurde zum meistgebrauten Bierstil Deutschlands.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="mb-2 text-sm font-bold text-[#1C2A16]">Charakter</h4>
+                  <p className="text-sm leading-relaxed text-[#3A4A2E]">
+                    Klar und goldgelb, ausgeprägte Hopfenbittere, elegant trocken mit blumigen Noten.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Bockbier */}
+            <Card className="overflow-hidden border border-border transition-all hover:shadow-lg">
+              <div className="relative h-48 overflow-hidden bg-[#F0DCC8]">
+                <Image
+                  src="/images/bockbier.jpg"
+                  alt="Bockbier"
+                  fill
+                  className="object-cover opacity-40"
+                />
+                <div className="relative z-10 p-6">
+                  <h3 className="mb-2 font-serif text-2xl font-bold text-[#2C1F14]">Bockbier</h3>
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-serif text-3xl font-bold text-[#2C1F14]">6.5-8</span>
+                    <span className="text-sm font-medium text-[#5C4632]">% vol</span>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4 bg-white p-6">
+                <div>
+                  <h4 className="mb-2 text-sm font-bold text-[#2C1F14]">Ursprung</h4>
+                  <p className="text-sm leading-relaxed text-[#5C4632]">
+                    Süddeutschland - Mittelalter. Starkes Bier, traditionell zur Fastenzeit gebraut, um den Mönchen Kraft zu geben.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="mb-2 text-sm font-bold text-[#2C1F14]">Charakter</h4>
+                  <p className="text-sm leading-relaxed text-[#5C4632]">
+                    Malzig-süß, vollmundig mit Karamell- und Brotnoten, kräftiger Körper und wärmendes Finish.
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-sm italic text-muted-foreground">
+              Höchste Alkoholstärke in der Biersektion: 8 % vol
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Topics Section */}
+      <section className="bg-muted/30 px-4 py-20 md:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <span className="mb-4 inline-block text-sm font-medium uppercase tracking-wide text-primary">
+              Themen
+            </span>
+            <h2 className="mb-4 font-serif text-3xl font-bold text-foreground md:text-5xl">
+              Die Welt des Obstlers
+            </h2>
+            <div className="mx-auto h-1 w-16 bg-accent"></div>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {/* Geschichte */}
+            <Card id="geschichte" className="group overflow-hidden border border-border bg-card transition-all hover:shadow-lg">
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src="/images/orchard-landscape.jpg"
+                  alt="Historische deutsche Obstgärten"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <span className="mb-2 inline-block text-xs font-bold uppercase tracking-wide text-primary">
+                  Historisches
+                </span>
+                <h3 className="mb-4 font-serif text-xl font-bold text-foreground">Vom Römischen Obstgarten bis heute</h3>
+                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                  Die Geschichte des Obstlers beginnt in den Obstgärten Süddeutschlands. 
+                  Bereits im Mittelalter brannten Bauern aus überschüssigem Obst klare Destillate. 
+                  Was als praktische Konservierungsmethode begann, wurde zur Kunst.
+                </p>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  Im 18. und 19. Jahrhundert perfektionierten Brennmeister in Baden-Württemberg und Bayern 
+                  die Technik der Doppeldestillation. Der Obstler wurde zum Symbol für Qualität und regionale Identität.
+                </p>
+              </div>
+            </Card>
+
+            {/* Herstellung */}
+            <Card id="herstellung" className="group overflow-hidden border border-border bg-card transition-all hover:shadow-lg">
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src="/images/distillation.jpg"
+                  alt="Traditionelle Destillation"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <span className="mb-2 inline-block text-xs font-bold uppercase tracking-wide text-accent">
+                  Herstellung
+                </span>
+                <h3 className="mb-4 font-serif text-xl font-bold text-foreground">Die Kunst der Destillation</h3>
+                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                  Echter Obstler entsteht aus vollreifen Früchten - Äpfel, Birnen, Zwetschgen oder Kirschen. 
+                  Die Früchte werden gemahlen, fermentiert und dann zweifach destilliert.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li><span className="font-semibold text-foreground">Maischen:</span> Früchte werden zerkleinert und vergoren</li>
+                  <li><span className="font-semibold text-foreground">Brennen:</span> Zweifache Destillation für Reinheit</li>
+                  <li><span className="font-semibold text-foreground">Reifung:</span> Lagerung für harmonischen Geschmack</li>
+                </ul>
+              </div>
+            </Card>
+
+            {/* Sorten */}
+            <Card className="group overflow-hidden border border-border bg-card transition-all hover:shadow-lg">
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src="/images/fruits.jpg"
+                  alt="Deutsche Obstvielfalt"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <span className="mb-2 inline-block text-xs font-bold uppercase tracking-wide text-primary">
+                  Vielfalt
+                </span>
+                <h3 className="mb-4 font-serif text-xl font-bold text-foreground">Obstler-Varianten</h3>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <h4 className="mb-1 font-semibold text-foreground">Apfel-Birnen-Obstler (38-43% vol)</h4>
+                    <p className="text-muted-foreground">
+                      Der Klassiker - ausgewogen zwischen fruchtiger Süße und milder Säure
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="mb-1 font-semibold text-foreground">Zwetschgenwasser (40-45% vol)</h4>
+                    <p className="text-muted-foreground">
+                      Intensive Pflaumenfrucht mit leichter Mandelnote
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="mb-1 font-semibold text-foreground">Kirschwasser (43-50% vol)</h4>
+                    <p className="text-muted-foreground">
+                      Die Königsdisziplin - kraftvoll, aromatisch, mit Kirsch-Eleganz
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Genuss */}
+            <Card id="genuss" className="group overflow-hidden border border-border bg-card transition-all hover:shadow-lg">
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src="/images/tradition.jpg"
+                  alt="Traditioneller Genuss"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <span className="mb-2 inline-block text-xs font-bold uppercase tracking-wide text-accent">
+                  Genuss
+                </span>
+                <h3 className="mb-4 font-serif text-xl font-bold text-foreground">Die Kunst des Genießens</h3>
+                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                  Obstler wird traditionell bei Zimmertemperatur in kleinen Gläsern serviert - 
+                  das &quot;Stamperl&quot; oder &quot;Schnäpsle&quot;, wie man im Süden sagt.
+                </p>
+                <div className="space-y-2 text-sm">
+                  <div>
+                    <span className="font-semibold text-foreground">Temperatur:</span>
+                    <span className="text-muted-foreground"> 16-18°C - zu kalt verschließen sich die Aromen</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground">Glas:</span>
+                    <span className="text-muted-foreground"> Tulpenförmiges Obstlerglas oder kleines Schnapsglas</span>
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground">Moment:</span>
+                    <span className="text-muted-foreground"> Als Digestif nach einem herzhaften Essen</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            {/* Kulinarik */}
+            <Card className="group overflow-hidden border border-border bg-card transition-all hover:shadow-lg">
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src="/images/vesper.jpg"
+                  alt="Schwarzwälder Vesper"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                  In Süddeutschland gehört der Obstler zur deftigen Küche wie die Butter aufs Brot. 
+                  Seine klare Fruchtigkeit harmoniert perfekt mit herzhaften Speisen.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li><span className="font-semibold text-foreground">Schwarzwälder Schinken</span> - geräuchert und würzig</li>
+                  <li><span className="font-semibold text-foreground">Käsespätzle</span> - cremig und gehaltvoll</li>
+                  <li><span className="font-semibold text-foreground">Brezel & Bauernbrot</span> - rustikal und authentisch</li>
+                </ul>
+              </div>
+            </Card>
+
+            {/* Tradition */}
+            <Card className="group overflow-hidden border border-border bg-card transition-all hover:shadow-lg">
+              <div className="relative h-56 overflow-hidden">
+                <Image
+                  src="/images/festival.jpg"
+                  alt="Brennerfeste & Tradition"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <span className="mb-2 inline-block text-xs font-bold uppercase tracking-wide text-accent">
+                  Feste
+                </span>
+                <h3 className="mb-4 font-serif text-xl font-bold text-foreground">Brennerfeste & Tradition</h3>
+                <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                  In Baden-Württemberg und Bayern feiern ganze Dörfer ihre Brennereitradition. 
+                  Obstler ist mehr als ein Getränk - er ist gelebte Kultur.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li><span className="font-semibold text-foreground">Brennerfeste im Herbst:</span> Nach der Ernte wird gemeinsam gefeiert</li>
+                  <li><span className="font-semibold text-foreground">Schnapsbrenner-Märkte:</span> Traditionelle Destillate zum Probieren</li>
+                  <li><span className="font-semibold text-foreground">Brennereiführungen:</span> Einblick in alte Handwerkskunst</li>
+                </ul>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-border/50 bg-muted/30 px-4 py-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 md:grid-cols-3">
+            <div>
+              <h3 className="mb-4 font-serif text-xl font-bold text-foreground">Deutschobstlerculture</h3>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Eine informative Plattform über die Kultur und Tradition des deutschen Obstlers und deutscher Biere. 
+                Hier wird weder verkauft noch bestellt.
+              </p>
+            </div>
+            <div>
+              <h4 className="mb-4 font-semibold text-foreground">Rechtliches</h4>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a href="/datenschutz" className="text-muted-foreground transition-colors hover:text-primary">
+                    Datenschutzerklärung
+                  </a>
+                </li>
+                <li>
+                  <a href="/cookie-policy" className="text-muted-foreground transition-colors hover:text-primary">
+                    Cookie-Richtlinie
+                  </a>
+                </li>
+                <li>
+                  <a href="/impressum" className="text-muted-foreground transition-colors hover:text-primary">
+                    Impressum
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-4 font-semibold text-foreground">Hinweis</h4>
+              <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                Diese Website richtet sich ausschließlich an Personen ab 18 Jahren. 
+                Bitte genießen Sie alkoholische Getränke verantwortungsbewusst.
+              </p>
+              <Badge variant="outline" className="border-primary/30 bg-primary/10">
+                18+ Nur für Erwachsene
+              </Badge>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-border/30 pt-8 text-center text-sm text-muted-foreground">
+            <p>Copyright 2026 Deutschobstlerculture. Alle Rechte vorbehalten.</p>
+            <p className="mt-2">Nur Information - kein Verkauf alkoholischer Getränke.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
