@@ -10,13 +10,15 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-40 border-b border-border/50 bg-background/80 backdrop-blur-md">
+    <nav className="fixed left-0 right-0 top-0 z-40 border-b border-border/50 bg-background/80 pt-[env(safe-area-inset-top,0px)] backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between md:h-20">
+        <div className="flex h-16 min-h-16 items-center justify-between gap-2 md:h-20 md:min-h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-          <Image src="/favicon.ico" alt="Deutschobstlerculture" width={32} height={32} />
-            <p className="font-serif text-xl font-bold text-foreground md:text-2xl">Deutschobstlerculture</p>
+          <Link href="/" className="flex min-w-0 flex-1 items-center gap-2 sm:flex-initial">
+          <Image src="/favicon.ico" alt="Deutschobstlerculture" width={32} height={32} className="h-8 w-8 shrink-0" />
+            <p className="min-w-0 truncate font-serif text-base font-bold text-foreground sm:text-xl md:text-2xl">
+              Deutschobstlerculture
+            </p>
           </Link>
 
           {/* Desktop Navigation */}

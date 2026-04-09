@@ -28,10 +28,10 @@ export function CookieBanner() {
   if (!showBanner) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 md:p-6">
-      <Card className="mx-auto max-w-4xl border-2 border-primary/20 bg-card/95 p-6 backdrop-blur-sm">
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 pb-[max(1rem,env(safe-area-inset-bottom,0px))] md:p-6 md:pb-[max(1.5rem,env(safe-area-inset-bottom,0px))]">
+      <Card className="mx-auto max-w-4xl border-2 border-primary/20 bg-card/95 p-4 backdrop-blur-sm sm:p-6">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div className="flex-1">
+          <div className="min-w-0 flex-1">
             <h3 className="mb-2 font-serif text-lg font-semibold text-foreground">
               Cookie-Hinweis
             </h3>
@@ -48,15 +48,15 @@ export function CookieBanner() {
               .
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex w-full flex-col gap-3 sm:flex-row sm:w-auto sm:justify-end sm:shrink-0">
             <Button
               variant="outline"
               onClick={declineCookies}
-              className="border-primary/30"
+              className="h-11 w-full border-primary/30 sm:w-auto"
             >
               Ablehnen
             </Button>
-            <Button onClick={acceptCookies} className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button onClick={acceptCookies} className="h-11 w-full bg-primary text-primary-foreground hover:bg-primary/90 sm:w-auto">
               Akzeptieren
             </Button>
           </div>

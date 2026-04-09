@@ -14,7 +14,7 @@ export default function ImpressumPage() {
     <div className="min-h-screen">
       <Navigation />
 
-      <main className="px-4 pb-20 pt-32 md:pt-40">
+      <main className="px-4 pb-20 pt-[max(8rem,calc(env(safe-area-inset-top,0px)+5.5rem))] md:pt-40">
         <div className="mx-auto max-w-4xl">
           <Link
             href="/"

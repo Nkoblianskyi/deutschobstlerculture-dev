@@ -18,7 +18,7 @@ export default function ObstlerArtikelPage() {
       <CookieBanner />
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 pb-16 pt-32 md:pb-24 md:pt-40">
+      <section className="relative overflow-hidden px-4 pb-16 pt-[max(8rem,calc(env(safe-area-inset-top,0px)+5.5rem))] md:pb-24 md:pt-40">
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/fruits.jpg"
@@ -248,17 +248,17 @@ export default function ObstlerArtikelPage() {
                 </div>
                 <div className="flex flex-col justify-center">
                   <div className="space-y-4">
-                    <div className="flex items-center justify-between rounded-lg border border-border bg-background p-4">
-                      <span className="font-medium text-foreground">Mindestalkoholgehalt</span>
-                      <span className="font-serif text-xl font-bold text-primary">37.5% vol</span>
+                    <div className="flex flex-col gap-2 rounded-lg border border-border bg-background p-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                      <span className="min-w-0 font-medium text-foreground">Mindestalkoholgehalt</span>
+                      <span className="shrink-0 font-serif text-xl font-bold text-primary">37.5% vol</span>
                     </div>
-                    <div className="flex items-center justify-between rounded-lg border border-border bg-background p-4">
-                      <span className="font-medium text-foreground">Typischer Bereich</span>
-                      <span className="font-serif text-xl font-bold text-primary">38-45% vol</span>
+                    <div className="flex flex-col gap-2 rounded-lg border border-border bg-background p-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                      <span className="min-w-0 font-medium text-foreground">Typischer Bereich</span>
+                      <span className="shrink-0 font-serif text-xl font-bold text-primary">38-45% vol</span>
                     </div>
-                    <div className="flex items-center justify-between rounded-lg border border-accent/30 bg-accent/10 p-4">
-                      <span className="font-medium text-foreground">Maximum</span>
-                      <span className="font-serif text-xl font-bold text-accent">50% vol</span>
+                    <div className="flex flex-col gap-2 rounded-lg border border-accent/30 bg-accent/10 p-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                      <span className="min-w-0 font-medium text-foreground">Maximum</span>
+                      <span className="shrink-0 font-serif text-xl font-bold text-accent">50% vol</span>
                     </div>
                   </div>
                 </div>

@@ -11,7 +11,7 @@ export default function HomePage() {
       <CookieBanner />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-4 pb-20 pt-32 md:pb-32 md:pt-40">
+      <section className="relative overflow-hidden px-4 pb-16 pt-[max(8rem,calc(env(safe-area-inset-top,0px)+5.5rem))] sm:pb-20 md:pb-32 md:pt-40">
         {/* Full Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
@@ -29,7 +29,7 @@ export default function HomePage() {
             <Badge variant="secondary" className="mb-6 border border-primary/20 bg-card/80 px-4 py-2 text-sm font-medium text-foreground backdrop-blur-sm">
               Süddeutschland - Seit Jahrhunderten
             </Badge>
-            <h1 className="mb-6 font-serif text-4xl font-bold leading-tight text-balance text-foreground md:text-6xl lg:text-7xl">
+            <h1 className="mb-6 font-serif text-3xl font-bold leading-tight text-balance text-foreground sm:text-4xl md:text-6xl lg:text-7xl">
               Die Seele der deutschen Obstgärten im Glas
             </h1>
             <div className="mx-auto mb-8 h-1 w-24 bg-primary"></div>
@@ -71,9 +71,9 @@ export default function HomePage() {
               </h2>
               <p className="text-sm text-muted-foreground">auf dieser Website</p>
             </div>
-            <div className="flex items-baseline gap-2">
-              <span className="font-serif text-6xl font-bold text-primary md:text-7xl">50</span>
-              <span className="text-2xl font-semibold text-foreground">% vol</span>
+            <div className="flex flex-wrap items-baseline justify-center gap-2">
+              <span className="font-serif text-5xl font-bold text-primary sm:text-6xl md:text-7xl">50</span>
+              <span className="text-xl font-semibold text-foreground sm:text-2xl">% vol</span>
             </div>
           </div>
           <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
