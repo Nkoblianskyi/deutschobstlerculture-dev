@@ -46,9 +46,6 @@ export default function ImpressumPage() {
                 <h2 className="mb-4 font-serif text-2xl font-bold text-foreground">Kontakt</h2>
                 <div className="space-y-1 text-muted-foreground">
                   <p>
-                    <span className="font-semibold text-foreground">Telefon:</span> +49 (0) 123 456789
-                  </p>
-                  <p>
                     <span className="font-semibold text-foreground">E-Mail:</span>{' '}
                     <a href="mailto:info@deutschobstlerculture.com" className="text-primary hover:underline">
                       info@deutschobstlerculture.com

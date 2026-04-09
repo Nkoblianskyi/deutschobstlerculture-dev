@@ -55,7 +55,7 @@ export default function UeberUnsPage() {
           <span className="mb-4 inline-block text-sm font-medium uppercase tracking-widest text-primary">
             Über uns
           </span>
-          <h1 className="mb-6 font-serif text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl">
+          <h1 className="mb-6 font-serif text-2xl font-bold leading-tight text-foreground md:text-3xl lg:text-3xl">
             Deutschobstlerculture
           </h1>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground">
