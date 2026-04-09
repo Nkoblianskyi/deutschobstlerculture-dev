@@ -11,6 +11,12 @@ export function Navigation() {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-40 border-b border-border/50 bg-background/80 pt-[env(safe-area-inset-top,0px)] backdrop-blur-md">
+      <p className="border-b border-border/40 bg-muted/60 px-3 py-1.5 text-center text-[0.65rem] leading-snug text-muted-foreground sm:px-4 sm:text-xs">
+        <span className="font-bold tracking-wide text-primary">18+</span>
+        {' '}
+        Nur für Erwachsene. Informationen zu alkoholischen Getränken —{' '}
+        <span className="whitespace-nowrap">kein Verkauf.</span> Bitte verantwortungsbewusst genießen.
+      </p>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 min-h-16 items-center justify-between gap-2 md:h-20 md:min-h-20">
           {/* Logo */}

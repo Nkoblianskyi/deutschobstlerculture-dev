@@ -18,7 +18,7 @@ export default function ObstlerArtikelPage() {
       <CookieBanner />
 
       {/* Hero */}
-      <section className="relative overflow-hidden px-4 pb-16 pt-[max(8rem,calc(env(safe-area-inset-top,0px)+5.5rem))] md:pb-24 md:pt-40">
+      <section className="relative overflow-hidden px-4 pb-16 pt-[max(8rem,calc(env(safe-area-inset-top,0px)+7rem))] md:pb-24 md:pt-40">
         <div className="absolute inset-0 -z-10">
           <Image
             src="/images/fruits.jpg"

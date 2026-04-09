@@ -11,7 +11,7 @@ export default function HomePage() {
       <CookieBanner />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden px-4 pb-16 pt-[max(8rem,calc(env(safe-area-inset-top,0px)+5.5rem))] sm:pb-20 md:pb-32 md:pt-40">
+      <section className="relative overflow-hidden px-4 pb-16 pt-[max(8rem,calc(env(safe-area-inset-top,0px)+7rem))] sm:pb-20 md:pb-32 md:pt-40">
         {/* Full Background Image */}
         <div className="absolute inset-0 -z-10">
           <Image
