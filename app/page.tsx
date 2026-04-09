@@ -61,28 +61,88 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Alcohol Strength Highlight */}
-      <section className="border-y-2 border-primary/20 bg-muted/50 px-4 py-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-center md:gap-12">
-            <div>
-              <h2 className="mb-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
-                Höchste Alkoholstärke
-              </h2>
-              <p className="text-sm text-muted-foreground">auf dieser Website</p>
+      {/* Alcohol strength highlight — Kirschwasser / Obstbrand */}
+      <section
+        className="relative overflow-hidden border-y border-primary/15 bg-gradient-to-b from-secondary/40 via-background to-muted/50 px-4 py-14 sm:py-16 md:py-20"
+        aria-labelledby="alkohol-highlight-heading"
+      >
+        <div
+          className="pointer-events-none absolute -left-24 top-1/2 h-64 w-64 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl md:h-80 md:w-80"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute -right-20 top-0 h-48 w-48 rounded-full bg-accent/15 blur-3xl md:h-72 md:w-72"
+          aria-hidden
+        />
+        <div className="relative mx-auto max-w-5xl">
+          <div className="overflow-hidden rounded-2xl border border-primary/20 bg-card/90 shadow-lg shadow-primary/5 backdrop-blur-sm sm:rounded-3xl">
+            <div className="grid gap-8 p-6 sm:p-8 md:gap-10 md:p-10 lg:grid-cols-12 lg:items-center lg:gap-12 lg:p-12">
+              <div className="space-y-4 text-center lg:col-span-7 lg:text-left">
+                <Badge
+                  variant="secondary"
+                  className="border border-primary/20 bg-primary/10 text-xs font-semibold uppercase tracking-wider text-primary"
+                >
+                  Höchste Stärke hier
+                </Badge>
+                <div className="space-y-2">
+                  <h2
+                    id="alkohol-highlight-heading"
+                    className="font-serif text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-[2.75rem] md:leading-tight"
+                  >
+                    Kirschwasser
+                  </h2>
+                  <p className="text-base font-medium text-primary sm:text-lg">
+                    Reiner Obstbrand aus Süßkirschen
+                  </p>
+                </div>
+                <p className="mx-auto max-w-xl text-pretty text-sm leading-relaxed text-muted-foreground sm:text-base lg:mx-0">
+                  Klar, aromatisch und kraftvoll — in süddeutschen Brennereien entsteht edles Kirschwasser,
+                  oft zweifach destilliert. Besonders ausdrucksstarke Abfüllungen erreichen bis zu{' '}
+                  <span className="font-semibold text-foreground">50&nbsp;% vol</span> und zählen zu den
+                  intensivsten Obstbränden der deutschen Tradition.
+                </p>
+              </div>
+
+              <div className="flex justify-center lg:col-span-5">
+                <div className="relative w-full max-w-[18rem] sm:max-w-xs">
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/15 via-transparent to-accent/10" />
+                  <div className="relative rounded-2xl border border-primary/25 bg-gradient-to-b from-card to-muted/30 p-6 text-center shadow-inner sm:p-8">
+                    <p className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-muted-foreground sm:text-xs">
+                      Auf dieser Website
+                    </p>
+                    <p className="mt-1 font-serif text-lg font-semibold text-foreground sm:text-xl">
+                      Maximalwert
+                    </p>
+                    <div className="mt-4 flex flex-wrap items-baseline justify-center gap-x-1 gap-y-0">
+                      <span className="font-serif text-5xl font-bold text-primary tabular-nums sm:text-6xl md:text-7xl">
+                        50
+                      </span>
+                      <span className="pb-1 text-lg font-semibold text-foreground sm:text-xl md:text-2xl">
+                        % vol
+                      </span>
+                    </div>
+                    <p className="mt-4 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                      Bezieht sich auf beschriebene Spitzenwerte bei Obstbränden — keine Verkaufs- oder
+                      Angebotsinformation.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-wrap items-baseline justify-center gap-2">
-              <span className="font-serif text-5xl font-bold text-primary sm:text-6xl md:text-7xl">50</span>
-              <span className="text-xl font-semibold text-foreground sm:text-2xl">% vol</span>
+
+            <div className="space-y-3 border-t border-border/60 bg-muted/20 px-6 py-6 sm:px-8 md:px-10 lg:px-12">
+              <p className="mx-auto max-w-3xl text-center text-sm leading-relaxed text-muted-foreground sm:text-base">
+                Diese Seite ist ein reines Informationsangebot über alkoholische Getränke der deutschen
+                Tradition. Hier wird weder verkauft noch bestellt — nur die Kultur bewahrt.
+              </p>
+              <p className="text-center text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                <span className="font-semibold text-foreground">18+</span>
+                {' — '}
+                Alkoholische Getränke sind nur für Personen ab 18 Jahren. Bitte trinken Sie
+                verantwortungsbewusst.
+              </p>
             </div>
           </div>
-          <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-relaxed text-muted-foreground">
-            Diese Seite ist ein reines Informationsangebot über alkoholische Getränke der deutschen Tradition. 
-            Hier wird weder verkauft noch bestellt - nur die Kultur bewahrt.
-          </p>
-          <p className="mt-4 text-center text-xs text-muted-foreground">
-            18+ - Alkoholische Getränke sind nur für Personen ab 18 Jahren. Bitte trinken Sie verantwortungsbewusst.
-          </p>
         </div>
       </section>
 
