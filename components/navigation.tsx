@@ -32,7 +32,7 @@ export function Navigation() {
             <Link href="/obstler" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
               Obstler
             </Link>
-            <Link href="/#bier" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
+            <Link href="/bier" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
               Bierkultur
             </Link>
             <Link href="/ueber-uns" className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary">
@@ -63,7 +63,7 @@ export function Navigation() {
                 Obstler
               </Link>
               <Link
-                href="/#bier"
+                href="/bier"
                 className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
                 onClick={() => setIsOpen(false)}
               >

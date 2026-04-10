@@ -1,7 +1,9 @@
+import Link from 'next/link'
 import { Navigation } from '@/components/navigation'
 import { CookieBanner } from '@/components/cookie-banner'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import { BeerStyleCards } from '@/components/beer-style-cards'
 import Image from 'next/image'
 
 export default function HomePage() {
@@ -159,114 +161,60 @@ export default function HomePage() {
             <p className="mx-auto max-w-2xl text-lg text-pretty text-muted-foreground">
               Vom Reinheitsgebot bis zur modernen Craft-Bewegung - deutsches Bier ist Weltkultur
             </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Weizenbier */}
-            <Card className="overflow-hidden border border-border transition-all hover:shadow-lg">
-              <div className="relative h-48 overflow-hidden bg-[#F5E6D3]">
-                <Image
-                  src="/images/weizenbier.jpg"
-                  alt="Weizenbier"
-                  fill
-                  className="object-cover opacity-40"
-                />
-                <div className="relative z-10 p-6">
-                  <h3 className="mb-2 font-serif text-2xl font-bold text-[#2C2416]">Weizenbier</h3>
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-serif text-3xl font-bold text-[#2C2416]">5-6</span>
-                    <span className="text-sm font-medium text-[#5C4A2C]">% vol</span>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-4 bg-white p-6">
-                <div>
-                  <h4 className="mb-2 text-sm font-bold text-[#2C2416]">Ursprung</h4>
-                  <p className="text-sm leading-relaxed text-[#5C4A2C]">
-                    Bayern - 16. Jahrhundert. Das obergärige Weizenbier entstand als königliches Privileg und wurde zum Symbol bayerischer Braukunst.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="mb-2 text-sm font-bold text-[#2C2416]">Charakter</h4>
-                  <p className="text-sm leading-relaxed text-[#5C4A2C]">
-                    Fruchtige Bananen- und Nelkenaromen, natürlich trüb durch die Hefe, erfrischend mit weichem Körper.
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            {/* Pilsner */}
-            <Card className="overflow-hidden border border-border transition-all hover:shadow-lg">
-              <div className="relative h-48 overflow-hidden bg-[#D8E3D0]">
-                <Image
-                  src="/images/pilsner.jpg"
-                  alt="Pilsner"
-                  fill
-                  className="object-cover opacity-40"
-                />
-                <div className="relative z-10 p-6">
-                  <h3 className="mb-2 font-serif text-2xl font-bold text-[#1C2A16]">Pilsner</h3>
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-serif text-3xl font-bold text-[#1C2A16]">4.5-5</span>
-                    <span className="text-sm font-medium text-[#3A4A2E]">% vol</span>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-4 bg-white p-6">
-                <div>
-                  <h4 className="mb-2 text-sm font-bold text-[#1C2A16]">Ursprung</h4>
-                  <p className="text-sm leading-relaxed text-[#3A4A2E]">
-                    Norddeutschland - 19. Jahrhundert. Das untergärige Pils wurde zum meistgebrauten Bierstil Deutschlands.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="mb-2 text-sm font-bold text-[#1C2A16]">Charakter</h4>
-                  <p className="text-sm leading-relaxed text-[#3A4A2E]">
-                    Klar und goldgelb, ausgeprägte Hopfenbittere, elegant trocken mit blumigen Noten.
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            {/* Bockbier */}
-            <Card className="overflow-hidden border border-border transition-all hover:shadow-lg">
-              <div className="relative h-48 overflow-hidden bg-[#F0DCC8]">
-                <Image
-                  src="/images/bockbier.jpg"
-                  alt="Bockbier"
-                  fill
-                  className="object-cover opacity-40"
-                />
-                <div className="relative z-10 p-6">
-                  <h3 className="mb-2 font-serif text-2xl font-bold text-[#2C1F14]">Bockbier</h3>
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-serif text-3xl font-bold text-[#2C1F14]">6.5-8</span>
-                    <span className="text-sm font-medium text-[#5C4632]">% vol</span>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-4 bg-white p-6">
-                <div>
-                  <h4 className="mb-2 text-sm font-bold text-[#2C1F14]">Ursprung</h4>
-                  <p className="text-sm leading-relaxed text-[#5C4632]">
-                    Süddeutschland - Mittelalter. Starkes Bier, traditionell zur Fastenzeit gebraut, um den Mönchen Kraft zu geben.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="mb-2 text-sm font-bold text-[#2C1F14]">Charakter</h4>
-                  <p className="text-sm leading-relaxed text-[#5C4632]">
-                    Malzig-süß, vollmundig mit Karamell- und Brotnoten, kräftiger Körper und wärmendes Finish.
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          <div className="mt-8 text-center">
-            <p className="text-sm italic text-muted-foreground">
-              Höchste Alkoholstärke in der Biersektion: 8 % vol
+            <p className="mx-auto mt-6 max-w-xl">
+              <Link
+                href="/bier"
+                className="text-sm font-semibold text-primary underline-offset-4 transition-colors hover:text-primary/80 hover:underline"
+              >
+                Ausführliche Seite: Brauereien, Bierstuben &amp; Tradition →
+              </Link>
             </p>
           </div>
+
+          <div className="mb-12 grid gap-6 md:grid-cols-2">
+            <Card className="overflow-hidden border border-primary/20 bg-gradient-to-br from-card via-card to-primary/[0.07] shadow-sm transition-shadow hover:shadow-md">
+              <div className="h-1.5 bg-gradient-to-r from-amber-800/90 via-amber-600/50 to-primary/35" aria-hidden />
+              <div className="p-6 md:p-8">
+                <span className="text-xs font-bold uppercase tracking-widest text-primary">Brauorte</span>
+                <h3 className="mt-2 font-serif text-xl font-bold text-foreground md:text-2xl">Brauereien</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Familienbetriebe, Klosterbrauereien und moderne Handwerksbrauereien prägen das Bild: Kupferkessel,
+                  Malzduft und oft Führungen machen das Brauen erlebbar. Regionale Sorten sind Ausdruck lokaler Identität.
+                </p>
+              </div>
+            </Card>
+            <Card className="overflow-hidden border border-primary/20 bg-gradient-to-br from-card via-card to-accent/[0.08] shadow-sm transition-shadow hover:shadow-md">
+              <div className="h-1.5 bg-gradient-to-r from-emerald-900/80 via-emerald-600/45 to-accent/30" aria-hidden />
+              <div className="p-6 md:p-8">
+                <span className="text-xs font-bold uppercase tracking-widest text-accent">Gastkultur</span>
+                <h3 className="mt-2 font-serif text-xl font-bold text-foreground md:text-2xl">
+                  Bierstube, Biergarten &amp; Bar
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  Gemütliche Stuben mit Stammtisch, Kastanien-Biergärten mit Vesperkultur und urbane Bierbars mit vielen
+                  Zapfhähnen — überall steht Geselligkeit und frisch gezapftes Bier im Mittelpunkt.
+                </p>
+              </div>
+            </Card>
+          </div>
+
+          <div className="mb-12 rounded-2xl border border-border/70 bg-muted/25 px-6 py-8 shadow-sm md:rounded-3xl md:px-10 md:py-10">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">Handwerk &amp; Ästhetik</span>
+              <h3 className="mt-2 font-serif text-xl font-bold text-foreground md:text-2xl">
+                Schmuck, Krüge &amp; Rezepttradition
+              </h3>
+              <p className="mt-4 text-pretty text-sm leading-relaxed text-muted-foreground md:text-base">
+                Historische Schilder, Zunftzeichen und Fassadenmalerei erzählen Braugeschichte sichtbar;{' '}
+                <strong className="font-semibold text-foreground">Bierkrüge</strong> und Zinndeckel sind Sammler- und
+                Kultobjekte. Das <strong className="font-semibold text-foreground">Reinheitsgebot</strong> und
+                bewahrte <strong className="font-semibold text-foreground">Hausrezepturen</strong> sichern Stil und
+                Qualität — dazu saisonale Rituale wie der <strong className="font-semibold text-foreground">Bockanstich</strong>.
+              </p>
+            </div>
+          </div>
+
+          <BeerStyleCards />
         </div>
       </section>
 

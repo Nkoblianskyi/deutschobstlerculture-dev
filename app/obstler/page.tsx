@@ -472,7 +472,7 @@ export default function ObstlerArtikelPage() {
           </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link 
-              href="/#bier" 
+              href="/bier" 
               className="rounded-lg border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
             >
               Deutsche Bierkultur
